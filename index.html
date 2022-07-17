@@ -1,0 +1,298 @@
+<html>
+<head>
+  <title>Case Study Between Google Lens and MobileNet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <center>
+        <h3>Case Study Between Google Lens and MobileNet</h3>
+        <br>
+        <span>
+            <h4 class="btn btn-primary">Google Lens</h4>
+            <img id="GoogleLens" src="google lens.jpg">
+            <h3>Vs</h3>
+            <h4 class="btn btn-danger">MobileNet</h4>
+            <img id="mobileNet" src="mobileNet.jpg">
+        </span>
+    </center>
+    <hr>
+    <ol>
+      <div class="test_image_and_result col-xs-12">
+
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image - </b>
+          <img src="airpods.jpg" class="img-responsive">
+        </li>
+
+        <h5 class="col-sm-4 col-xs-12">
+      Output on <b>Google Lens</b> -
+          <span>Airpods</span>
+        </h5>
+
+        <h5 class="col-sm-4 col-xs-12">
+          Output on <b>MobileNet Model - </b>
+          <span>Toaster</span>
+        </h5>
+
+        <div class="mini_result" class="col-xs-12">
+          <h4>Result - </h4>
+          <hr>
+          <h4>Google Lens was more accurate, the object was Airpod Pros.</h4>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image - </b>
+          <img src="aveeno.jpg" class="img-responsive">
+        </li>
+
+        <h5 class="col-sm-4 col-xs-12">
+      Output on <b>Google Lens</b> -
+          <span>Aveeno Daily Moisturizing Lotion</span>
+        </h5>
+        
+        <h5 class="col-sm-4 col-xs-12">
+          Output on <b>MobileNet Model - </b>
+          <span>Lotion</span>
+        </h5>
+
+        <div class="mini_result" class="col-xs-12">
+          <h4>Result - </h4>
+          <hr>
+          <h4>Google Lens was more accurate, the object was Aveeno Daily Moisturizing Lotion, though MobileNet was also correct.</h4>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image - </b>
+          <img src="book.jpg" class="img-responsive">
+        </li>
+
+        <h5 class="col-sm-4 col-xs-12">
+      Output on <b>Google Lens</b> -
+          <span>The Throne of Fire</span>
+        </h5>
+
+        <h5 class="col-sm-4 col-xs-12">
+          Output on <b>MobileNet Model - </b>
+          <span>Comic Book</span>
+        </h5>
+
+        <div class="mini_result" class="col-xs-12">
+          <h4>Result - </h4>
+          <hr>
+          <h4>Google Lens was more accurate, the object was the book The Throne of Fire.</h4>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image - </b>
+          <img src="bottle.jpg" class="img-responsive">
+        </li>
+
+        <h5 class="col-sm-4 col-xs-12">
+      Output on <b>Google Lens</b> -
+          <span>Kirkland Purified Water</span>
+        </h5>
+
+        <h5 class="col-sm-4 col-xs-12">
+          Output on <b>MobileNet Model - </b>
+          <span>Water Bottle</span>
+        </h5>
+
+        <div class="mini_result" class="col-xs-12">
+          <h4>Result - </h4>
+          <hr>
+          <h4>Google Lens was more accurate, the object was Kirkland Puried Water bottle, though MobileNet was also correct.</h4>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image - </b>
+          <img src="chapstick.jpg" class="img-responsive">
+        </li>
+
+        <h5 class="col-sm-4 col-xs-12">
+      Output on <b>Google Lens</b> -
+          <span>Tooth & Gums Spritz</span>
+        </h5>
+
+        <h5 class="col-sm-4 col-xs-12">
+          Output on <b>MobileNet Model - </b>
+          <span>Lighter</span>
+        </h5>
+
+        <div class="mini_result" class="col-xs-12">
+          <h4>Result - </h4>
+          <hr>
+          <h4>GoogleLens was more accurate, however both were incorrect. The object was lip balm.</h4>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image - </b>
+          <img src="lotion.jpg" class="img-responsive">
+        </li>
+
+        <h5 class="col-sm-4 col-xs-12">
+      Output on <b>Google Lens</b> -
+          <span>Ultra Shea Body Cream</span>
+        </h5>
+
+        <h5 class="col-sm-4 col-xs-12">
+          Output on <b>MobileNet Model - </b>
+          <span>Hair Spray</span>
+        </h5>
+
+        <div class="mini_result" class="col-xs-12">
+          <h4>Result - </h4>
+          <hr>
+          <h4>Google Lens was more accurate, the object was Ultra Shea Body Cream.</h4>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image - </b>
+          <img src="moisturizer.jpg" class="img-responsive">
+        </li>
+
+        <h5 class="col-sm-4 col-xs-12">
+      Output on <b>Google Lens</b> -
+          <span>Eminence Moisturizer</span>
+        </h5>
+
+        <h5 class="col-sm-4 col-xs-12">
+          Output on <b>MobileNet Model - </b>
+          <span>Bottle Cap</span>
+        </h5>
+
+        <div class="mini_result" class="col-xs-12">
+          <h4>Result - </h4>
+          <hr>
+          <h4>Google Lens was more accurate, the object was Eminence Moisturizer.</h4>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image - </b>
+          <img src="pom.jpg" class="img-responsive">
+        </li>
+
+        <h5 class="col-sm-4 col-xs-12">
+      Output on <b>Google Lens</b> -
+          <span>Dry Brush</span>
+        </h5>
+
+        <h5 class="col-sm-4 col-xs-12">
+          Output on <b>MobileNet Model - </b>
+          <span>Mask</span>
+        </h5>
+
+        <div class="mini_result" class="col-xs-12">
+          <h4>Result - </h4>
+          <hr>
+          <h4>Google Lens was more accurate, however both were incorrect. The object was a pom pom.</h4>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image - </b>
+          <img src="shell.jpg" class="img-responsive">
+        </li>
+
+        <h5 class="col-sm-4 col-xs-12">
+      Output on <b>Google Lens</b> -
+          <span>Lambis</span>
+        </h5>
+
+        <h5 class="col-sm-4 col-xs-12">
+          Output on <b>MobileNet Model - </b>
+          <span>Triceratops</span>
+        </h5>
+
+        <div class="mini_result" class="col-xs-12">
+          <h4>Result - </h4>
+          <hr>
+          <h4>Google Lens was more accurate, the object was a Lambis.</h4>
+        </div>
+
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image - </b>
+          <img src="tissue.jpg" class="img-responsive">
+        </li>
+
+        <h5 class="col-sm-4 col-xs-12">
+      Output on <b>Google Lens</b> -
+          <span>Kleenex Facial Tissue</span>
+        </h5>
+
+        <h5 class="col-sm-4 col-xs-12">
+          Output on <b>MobileNet Model - </b>
+          <span>Paper Towel</span>
+        </h5>
+
+        <div class="mini_result" class="col-xs-12">
+          <h4>Result - </h4>
+          <hr>
+          <h4>Google Lens was more accurate, the object was Kleenex Face Tissue.</h4>
+        </div>
+
+      </div>
+      <br>
+</ol>
+
+<center>
+<div id="conclusion">
+  <p>
+    I have tested 10 images. <br> Google Lens guessed 8 out of 10 images correctly, and was more accurate for all of them. <br> MobileNet was accurate for 2 out of 10 of the images, and was less accurate for all of them.<br>
+  </p>
+  <h6>In conclusion, Google Lens is more accurate on 100% of the images, thus being the better object recognizer</h6>
+</div>
+</center>
+
+</body>
